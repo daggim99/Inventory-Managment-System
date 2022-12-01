@@ -14,7 +14,7 @@ const userSchema = mongoose.Schema(
       trim: true,
       match: [
         /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/,
-        "Please enter a valid emaial",
+        "Please enter a valid email",
       ],
     },
     password: {
@@ -25,12 +25,12 @@ const userSchema = mongoose.Schema(
     },
     photo: {
       type: String,
-      required: [true, "Please add a photo"],
+      // required: [true, "Please add a photo"],
       default: "https://i.ibb.co/4pDNDk1/avatar.png",
     },
     phone: {
       type: String,
-      default: "+234",
+      default: "+251",
     },
     bio: {
       type: String,

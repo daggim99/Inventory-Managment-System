@@ -19,7 +19,10 @@ app.use(express.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 app.use(
   cors({
-    origin: ["http://localhost:3000", "https://pinvent-app.vercel.app"],
+    origin: [
+      "http://localhost:3000",
+      "https://inventory-managment-system.vercel.app/",
+    ],
     credentials: true,
   })
 );
@@ -44,7 +47,7 @@ mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     app.listen(PORT, () => {
-      console.log(`Server Running on port ${PORT}`);
+      console.log(`Server Running on port ${PORT}...`);
     });
   })
   .catch((err) => console.log(err));
