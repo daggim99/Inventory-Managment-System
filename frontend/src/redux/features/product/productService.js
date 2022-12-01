@@ -1,14 +1,8 @@
 import axios from "axios";
 
-let BACKEND_URL;
-
-if (process.env.NODE_ENV === "development") {
-  BACKEND_URL = process.env.REACT_APP_BACKEND_URL_LOCAL;
-} else {
-  BACKEND_URL =
-    "https://inventory-managment-system-daggim-api.onrender.com" ||
-    process.env.REACT_APP_BACKEND_URL;
-}
+const BACKEND_URL =
+  "https://inventory-managment-system-daggim-api.onrender.com" ||
+  process.env.REACT_APP_BACKEND_URL;
 
 const API_URL = `${BACKEND_URL}/api/products/`;
 
