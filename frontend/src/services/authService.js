@@ -1,10 +1,15 @@
 import axios from "axios";
 import { toast } from "react-toastify";
 
-export const BACKEND_URL =
-  "https://inventory-managment-system-daggim-api.onrender.com" ||
-  process.env.REACT_APP_BACKEND_URL;
+let BACKEND_URL;
 
+if (process.env.NODE_ENV === "development") {
+  BACKEND_URL = process.env.REACT_APP_BACKEND_URL_LOCAL;
+} else {
+  BACKEND_URL =
+    "https://inventory-managment-system-daggim-api.onrender.com" ||
+    process.env.REACT_APP_BACKEND_URL;
+}
 export const validateEmail = (email) => {
   return email.match(
     /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
