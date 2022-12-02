@@ -54,12 +54,12 @@ const EditProfile = () => {
       ) {
         const image = new FormData();
         image.append("file", profileImage);
-        image.append("cloud_name", "zinotrust");
-        image.append("upload_preset", "wk66xdkq");
+        image.append("cloud_name", "idldhz");
+        image.append("upload_preset", "upfims");
 
         // First save image to cloudinary
         const response = await fetch(
-          "https://api.cloudinary.com/v1_1/zinotrust/image/upload",
+          "https://api.cloudinary.com/v1_1/idldhz/image/upload",
           { method: "post", body: image }
         );
         const imgData = await response.json();
@@ -92,7 +92,7 @@ const EditProfile = () => {
 
       <Card cardClass={"card --flex-dir-column"}>
         <span className="profile-photo">
-          <img src={user?.photo} alt="profilepic" />
+          <img src={user?.photo} alt="profile-pic" />
         </span>
         <form className="--form-control --m" onSubmit={saveProfile}>
           <span className="profile-data">
