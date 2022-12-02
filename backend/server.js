@@ -37,6 +37,8 @@ cloudinary.config({
   secure: true,
 });
 
+console.log(cloud_name, " ", api_key, " ", api_secret);
+
 if (typeof process.env.CLOUDINARY_URL === "undefined") {
   console.warn("!! cloudinary config is undefined !!");
   console.warn("export CLOUDINARY_URL or set dotenv file");
