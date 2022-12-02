@@ -10,6 +10,8 @@ const errorHandler = require("./middleWare/errorMiddleware");
 const cookieParser = require("cookie-parser");
 const path = require("path");
 
+const cloudinary = require("cloudinary").v2;
+
 const app = express();
 
 // Middlewares
@@ -27,6 +29,13 @@ app.use(
     credentials: true,
   })
 );
+
+cloudinary.config({
+  cloud_name: process.env.CLOUD_NAME,
+  api_key: process.env.API_KEY,
+  api_secret: process.env.API_SECRET,
+  secure: true,
+});
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 

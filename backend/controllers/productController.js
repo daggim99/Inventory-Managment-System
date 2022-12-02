@@ -19,7 +19,8 @@ const createProduct = asyncHandler(async (req, res) => {
     // Save image to cloudinary
     let uploadedFile;
     try {
-      uploadedFile = await cloudinary.v2.uploader.upload(req.file.path, {
+      uploadedFile = await cloudinary.uploader.upload(req.file.path, {
+        public_id: `IMS/${req.file.path}`,
         folder: "IMS",
         resource_type: "image",
       });
