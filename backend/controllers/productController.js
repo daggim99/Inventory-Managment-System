@@ -3,7 +3,7 @@ const Product = require("../models/productModel");
 const { fileSizeFormatter } = require("../utils/fileUpload");
 const cloudinary = require("cloudinary").v2;
 
-// Create Product
+// Create Prouct
 const createProduct = asyncHandler(async (req, res) => {
   const { name, sku, category, quantity, price, description } = req.body;
 
@@ -19,7 +19,8 @@ const createProduct = asyncHandler(async (req, res) => {
     // Save image to cloudinary
     let uploadedFile;
     try {
-      uploadedFile = await cloudinary.uploader.upload(req.files.image.path, {
+      uploadedFile = await cloudinary.uploader.upload(req.file.path, {
+        public_id: `IMS/${req.file.path}`,
         folder: "IMS",
         resource_type: "image",
       });
