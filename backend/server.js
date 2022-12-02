@@ -37,15 +37,23 @@ cloudinary.config({
   secure: true,
 });
 
-console.log(cloud_name, " ", api_key, " ", api_secret);
+console.log(cloudinary.config);
 
-if (typeof process.env.CLOUDINARY_URL === "undefined") {
-  console.warn("!! cloudinary config is undefined !!");
-  console.warn("export CLOUDINARY_URL or set dotenv file");
-} else {
-  console.log("cloudinary config:");
-  console.log(cloudinary.config());
-}
+// if (typeof process.env.CLOUDINARY_URL === "undefined") {
+//   console.warn("!! cloudinary config is undefined !!");
+//   console.warn("export CLOUDINARY_URL or set dotenv file");
+// } else {
+//   console.log("cloudinary config:");
+console.log(cloudinary.config());
+console.log(
+  cloudinary.config({
+    cloud_name: process.env.CLOUD_NAME,
+    api_key: process.env.API_KEY,
+    api_secret: process.env.API_SECRET,
+    secure: true,
+  })
+);
+// }
 
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
