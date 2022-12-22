@@ -1,5 +1,5 @@
 import React from "react";
-import { MdInventory2 } from "react-icons/ai";
+import { AiOutlineSketch } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import "./Home.scss";
 import heroImg from "../../assets/inv-img.png";
@@ -10,7 +10,7 @@ const Home = () => {
     <div className="home">
       <nav className="container --flex-between ">
         <div className="logo">
-          <MdInventory2 size={35} />
+          <AiOutlineSketch size={35} />
         </div>
 
         <ul className="home-links">
