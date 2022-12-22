@@ -5,8 +5,8 @@
   --header-height: 45px;
 
   --font-family: "Poppins", sans-serif;
-  --dark-blue: #0a1930;
-  --light-blue: #1f93ff;
+  --dark-blue: #14213d;
+  --light-blue: #0096c7;
 
   --color-white: #fff;
   --color-dark: #333;
@@ -14,12 +14,12 @@
   --color-grey: #eee;
   --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
 
-  --color-purple: #9d0191;
-  --color-orange: #ff7722;
+  --color-purple: #cdb4db;
+  --color-orange: #ffc8dd;
 
-  --color-primary: #007bff;
-  --color-success: #28a745;
-  --color-danger: orangered;
+  --color-primary: #264653;
+  --color-success: #2a9d8f;
+  --color-danger: #e76f51;
 }
 
 * {
@@ -194,20 +194,20 @@ p {
 }
 
 .--color-primary {
-  color: #007bff;
+  color: #22223b;
 }
 .--color-danger {
-  color: orangered;
+  color: #e76f51;
 }
 .--color-success {
-  color: #28a745;
+  color: #2a9d8f;
 }
 
 .--color-white {
   color: #fff;
 }
 .--color-dark {
-  color: #333;
+  color: #9d8189;
 }
 
 /* Center Text */
@@ -319,7 +319,7 @@ p {
 
 .--btn-primary {
   color: #fff;
-  background: #007bff;
+  background: #3d405b;
 }
 .--btn-secondary {
   color: #fff;
@@ -328,12 +328,12 @@ p {
 }
 .--btn-danger {
   color: #fff;
-  background: orangered;
+  background: #e76f51;
 }
 
 .--btn-success {
   color: #fff;
-  background: #28a745;
+  background: #2a9d8f;
 }
 
 /* Background */
@@ -430,12 +430,8 @@ p {
   height: 3px;
   margin-bottom: 1rem;
 
-  background: rgb(217, 8, 170);
-  background: linear-gradient(
-    135deg,
-    rgba(163, 1, 191, 1) 44%,
-    rgba(217, 8, 170, 1) 57%
-  );
+  background: #80ffdb;
+  background: linear-gradient(135deg, #72efdd 44%, #64dfdf 57%);
 }
 
 .--list-style-none {

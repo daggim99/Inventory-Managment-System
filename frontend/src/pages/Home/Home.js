@@ -1,5 +1,5 @@
 import React from "react";
-import { RiProductHuntLine } from "react-icons/ri";
+import { MdInventory2 } from "react-icons/ai";
 import { Link } from "react-router-dom";
 import "./Home.scss";
 import heroImg from "../../assets/inv-img.png";
@@ -10,7 +10,7 @@ const Home = () => {
     <div className="home">
       <nav className="container --flex-between ">
         <div className="logo">
-          <RiProductHuntLine size={35} />
+          <MdInventory2 size={35} />
         </div>
 
         <ul className="home-links">
@@ -40,12 +40,12 @@ const Home = () => {
         <div className="hero-text">
           <h2>Inventory {"&"} Stock Management Solution</h2>
           <p>
-            Inventory system to control and manage proucts in the warehouse in
-            real timeand integrated to make it easier to develop your business.
+            Inventory system to control and manage products in the warehouse in
+            real time and integrated to make it easier to develop your business.
           </p>
           <div className="hero-buttons">
             <button className="--btn --btn-secondary">
-              <Link to="/dashboard">Free Trial 1 Month</Link>
+              <Link to="/dashboard">Get Started For Free</Link>
             </button>
           </div>
           <div className="--flex-start">
